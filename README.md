@@ -201,4 +201,3 @@ ___
 * [Learn PostgreSQL (GitHub)](https://github.com/dwyl/learn-postgresql)
 * [Try Redis](https://try.redis.io/)
 * [Redis Tutorial](https://www.tutorialspoint.com/redis/)
-
