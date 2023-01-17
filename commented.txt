@@ -1,0 +1,38 @@
+          <!-- Left elements -->
+
+          <!-- Center elements -->
+          <!-- <ul class="navbar-nav flex-row d-none d-md-flex">
+            <li class="nav-item me-3 me-lg-1">
+              <a
+                class="nav-link d-flex"
+                href="https://easy-data.mdbgo.io/#section-google-sheets"
+                target="_blank"
+              >
+                <img
+                  src="https://easy-data.mdbgo.io/img/logo-gs.png"
+                  height="22"
+                  class="me-2"
+                  alt=""
+                />
+                <span>Google Sheets example</span>
+              </a>
+            </li>
+          </ul> -->
+          <!-- Center elements -->
+
+          <!-- Right elements -->
+          <!-- <ul class="navbar-nav flex-row d-none d-md-flex">
+            <li class="nav-item me-3 me-lg-1">
+              <a
+                href="https://mdbootstrap.com/"
+                target="_blank"
+                class="
+                  btn btn-primary btn-rounded
+                  mx-2
+                  d-none d-lg-inline-block
+                "
+                ><i class="fas fa-cubes me-2"></i>MDB UI KIT</a
+              >
+            </li>
+          </ul>
+          <!-- Right elements -->
