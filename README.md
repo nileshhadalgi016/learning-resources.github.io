@@ -1,7 +1,7 @@
 # Courses Sources :)
 #### This site is going to have a list of available courses for free so that you can skill up and work hard towards your dreams!!!
 Don't forget to give us a star and make sure share it with your friends.
-## To visit our site [click here](https://techieprogrammer-courses-free-100.mdbgo.io/) 
+## To visit our site [Click here](https://techieprogrammer-courses-free-100.mdbgo.io/) 
 # Table of contents:
 1. [Start Here](#start-here)
 2. [Front End Web Development](#front-end-web-development)
