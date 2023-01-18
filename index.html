@@ -117,18 +117,30 @@
         function displayResult2(response) {
           let tableHead = "";
           let tableBody = "";
-
           response.result.values.forEach((row, index) => {
             if (index === 0) {
-              tableHead += "<tr>";
+              tableHead += " <tr>";
               row.forEach((val) => (tableHead += "<th>" + val + "</th>"));
               tableHead += "</tr>";
             }
             else{
               tableBody += "<tr>";
-              row.forEach((val) => (tableBody += "<td>" +val+"</td>"));
+                let counter =1;
+                row.forEach(val);
+                function val(item){
+                  if(counter==3) {tableBody += "<td> <a href="+item+"> <button class='btn'>Click Here </button> </a></td"}
+                    else {tableBody += "<th>" + item + "</th>"}
+                    counter+=1;
+                }
+              // row.forEach((val) => (tableBody += "<td> <a href="+val+">I am here </td>"));
               tableBody += "</tr>";
-            } 
+            }
+            // let sum = 0;
+            // const numbers = [65, 44, 12, 2];
+            // numbers.forEach(myFunction);
+            // function myFunction(item) {
+            //    sum += item;
+            // }
           });
 
           document.getElementById("table-head").innerHTML = tableHead;
