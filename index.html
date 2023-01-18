@@ -1,29 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Free Cources </title>
+    <title>Free Courses </title>
     <!-- Icon -->
-    <link
-      rel="icon"
-      href="./img/logo.jpg"
-      type="image/x-icon"
-    />
+    <link rel="icon" href="./img/logo.jpg" type="image/x-icon"/>
     <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
-    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
     <!-- Google Fonts Roboto -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"/>
     <!-- MDB UI KIT -->
     <link rel="stylesheet" href="css/mdb.min.css" />
     <!-- Custom styles -->
@@ -41,53 +29,34 @@
     <!--Main Navigation-->
     <header class="mb-10">
       <!-- Navbar-->
-      <nav
-        class="navbar navbar-expand-lg navbar-dark bg-dark shadow-2 fixed-top"
-      >
-        <div
-          class="
-            container-fluid
-            justify-content-center justify-content-md-between
-          "
-        >
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-2 fixed-top">
+        <div class="container-fluid justify-content-center justify-content-md-between">
           <!-- Left elements -->
           <ul class="navbar-nav flex-row align-items-center">
             <li class="nav-item me-3 me-lg-1">
-              <a
-                class="nav-link d-flex"
-                href="https://www.youtube.com/@TechieProgrammer"
-                target="_blank"
-              >
-                <img
-                  src="./img/logo.jpg"
-                  height="35"
-                  alt=""
-                  loading="lazy"
-                  class="me-2"
-                />
-                <span
-                  style="
-                    font-size: 19px;
-                    font-weight: 500;
-                  "
-                  >Techie <span class="text-theme">Programmer</span></span
-                >
+              <a class="nav-link d-flex" href="https://www.youtube.com/@TechieProgrammer" target="_blank">
+                <img src="./img/logo.jpg" height="35" alt="" loading="lazy" class="me-2"/>
+                <span style="font-size: 19px; font-weight: 500;">Techie <span class="text-theme">Programmer</span></span>
               </a>
             </li>
           </ul>
         </div>
-      </nav> -->
+      </nav> 
       <!-- Navbar -->
     </header>
     <!--Main Navigation-->
 
+    <!-- searchbar -->
+    <div class="input-group" style="width: 300px; margin-left: 20px;">
+      <input id="myInput" type="text" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+    </div>
     <!--Main layout-->
     <main>
       <div class="container">
         <!-- Table -->
-        <table class="table table-hover table-striped">
+        <table id="dtBasicExample" class="table table-hover table-striped">
           <thead id="table-head"></thead>
-          <tbody id="table-body"></tbody>
+          <tbody id="table-body" class="myTable"></tbody>
         </table>
         <!-- Table -->
       </div>
@@ -131,7 +100,6 @@
     </footer>
     <!--Footer-->
   </body>
-
   <!-- MDB ESSENTIAL -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <!-- Google API -->
@@ -158,7 +126,7 @@
             }
             else{
               tableBody += "<tr>";
-              row.forEach((val) => (tableBody += "<td>"+val+ "</td>"));
+              row.forEach((val) => (tableBody += "<td>" +val+"</td>"));
               tableBody += "</tr>";
             } 
           });
@@ -183,7 +151,16 @@
         });
       }
     }
-  </script>
+
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script>
 </html>
 <!-- Sheet id: https://docs.google.com/spreadsheets/d/e/2PACX-1vR-6_Zgug2QrL9qzKgEkIvExp70DzV-rVsNQXrWOhFPtcJ_xQ5EL9EY10YWyrRXjyBtO0rCPVZJQeJc/pubhtml -->
 <!-- Api key: AIzaSyCFb5SBCol1CK0W8Y8eTJ19HJjx8WVUP-Y -->
